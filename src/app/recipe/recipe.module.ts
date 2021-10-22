@@ -7,8 +7,8 @@ import { RecipeComponent } from "./recipe.component";
 import { RecipesDetailComponent } from "./recipes-detail/recipes-detail.component";
 import { RecipeItemComponent } from "./recipes-list/recipe-item/recipe-item.component";
 import { RecipesListComponent } from "./recipes-list/recipes-list.component";
-import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -19,9 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
         RecipeItemComponent,
         RecipeStartComponent,
         RecipeEditComponent,
-       
     ],
-    imports: [RouterModule, CommonModule, ReactiveFormsModule, RecipeRouterModule],
+    imports: [RouterModule, SharedModule, ReactiveFormsModule, RecipeRouterModule],
     // No reason to export these components now, because we are only using them in routing and no where else
     // exports: [
     //     RecipeComponent,
